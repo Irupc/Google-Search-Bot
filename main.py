@@ -22,12 +22,12 @@ I am a google search bot.
 
 > `I can search from google. Use me in inline.`
 
-Made by @FayasNoushad"""
+Hosted by @Zomething_else"""
 
 JOIN_BUTTON = [
     InlineKeyboardButton(
-        text='⚙ Join Updates Channel ⚙',
-        url='https://telegram.me/FayasNoushad'
+        text='⚙ Join Our Channel ⚙',
+        url='https://t.me/IruPC'
     )
 ]
 
@@ -57,7 +57,10 @@ async def inline(bot, update):
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton(text="Link", url=result["link"])],
+                        [InlineKeyboardButton(text="Open Link", url=result["link"])],
+                        [InlineKeyboardButton('Search again', switch_inline_query_current_chat=query)],
+                    ],[
+                        [InlineKeyboardButton(text="For More TG Bots", url="https://t.me/tgbotslk")],
                         JOIN_BUTTON
                     ]
                 )
@@ -73,7 +76,7 @@ def google(query):
     for info in informations:
         text = f"**Title:** `{info['title']}`"
         text += f"\n**Description:** `{info['description']}`"
-        text += f"\n\nMade by @FayasNoushad"
+        text += f"\n\nHosted by @Zomething_else"
         results.append(
             {
                 "title": info['title'],
