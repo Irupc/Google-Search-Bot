@@ -57,8 +57,7 @@ async def inline(bot, update):
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton(text="Open Link", url=result["link"])],
-                        [InlineKeyboardButton('Search again', switch_inline_query_current_chat="")],
+                        [InlineKeyboardButton(text="Open Link", url=result["link"])]
                     ],[
                         [InlineKeyboardButton(text="For More TG Bots", url="https://t.me/tgbotslk")],
                         JOIN_BUTTON
